@@ -1,11 +1,13 @@
 {
   "name": "udundi-coding-challenge",
+  "homepage": "https://tdrdimov.github.io/udundi-coding-chanllenge",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
@@ -23,6 +25,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "file-loader": "^6.2.0",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.2"
   },
