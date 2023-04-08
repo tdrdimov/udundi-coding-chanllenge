@@ -7,6 +7,7 @@
       height="43"
       viewBox="0 0 43 43"
       class="rounded-full bg-main"
+      v-show="!isOpen"
     >
       <g>
         <g>
@@ -20,3 +21,26 @@
   </span>
 </template>
 
+<script>
+export default {
+  props: {
+    isActive: Boolean
+  },
+  data() {
+    return {
+      isOpen: false
+    }
+  },
+  watch: {
+    isActive(nV) {
+      if (!nV) {
+        setTimeout(() => {
+          this.isOpen = nV
+        }, 500)
+      } else {
+        this.isOpen = nV
+      }
+    }
+  }
+}
+</script>

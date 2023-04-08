@@ -12,7 +12,7 @@
         class="modal-trigger cursor-pointer flex items-center w-fit"
         @click="toggleModal"
       >
-        <PlusIcon />
+        <PlusIcon :isActive="isActive" />
         <p
           v-show="!isActive"
           class="text-[18px] sm:text-[25px] font-lato text-white w-max ml-4 letter-spc-md"
