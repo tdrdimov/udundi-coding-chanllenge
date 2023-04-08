@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Compiles and minifies for production & Deploys the static files to Github Pages
+```
+npm run Deploy
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

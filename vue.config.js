@@ -1,9 +1,19 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ? '/udundi-coding-chanllenge/' : '/',
   transpileDependencies: ['vue'],
   css: {
     loaderOptions: {
       sass: {
         additionalData: `@import "~@/assets/styles/_variables.scss";`
+      },
+      postcss: {
+        postcssOptions: {
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer')
+          ]
+        },
+        sourceMap: true
       }
     }
   },

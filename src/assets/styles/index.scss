@@ -1,6 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import '_variables.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
-  font-family: 'didot';
-  src: url('@/assets/fonts/didot.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: $didot;
+  src: url('#{$fonts_path}didot.otf') format('opentype');
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body{
+padding: 0;
+margin: 0;
+font-family: $lato;
+}
+
+.bg-main {
+  background-color: $color_main;
+}
+
+.font-lato {
+  font-family: $lato;
+}
+
+.font-didot {
+  font-family: $didot;
+}
+
+.max-w-413 {
+  max-width: 413px;
+}
+
+.letter-spc-sm {
+  letter-spacing: 0.35px;
+}
+
+.letter-spc-md {
+  letter-spacing: 0.62px;
+}
+
+.letter-spc-lg {
+  letter-spacing: 1.69px;
+}
+
+.gradient-main {
+  background: $gradient_main;
 }
