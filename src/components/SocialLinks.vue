@@ -1,6 +1,6 @@
 <template>
-  <div class="absolute bottom-0 right-0 flex flex-col items-center mr-7 mb-10">
-    <a href="https://www.facebook.com/udundi" target="_blank" class="mb-5">
+  <div class="social-links absolute bottom-0 md:bottom-0 right-0 flex w-full md:w-fit justify-center md:flex-col items-center z-10 md:mr-7 mb-2 md:mb-10">
+    <a href="https://www.facebook.com/udundi" target="_blank" class="mr-9 md:mr-0 md:mb-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="68"
@@ -50,3 +50,13 @@
     </a>
   </div>
 </template>
+
+<style lang="scss">
+@media(max-width: 768px) {
+  .social-links {
+    svg {
+      width: 40px!important;
+    }
+  }
+}
+</style>

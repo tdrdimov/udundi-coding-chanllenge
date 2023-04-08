@@ -15,12 +15,12 @@
         <PlusIcon />
         <p
           v-show="!isActive"
-          class="text-[25px] font-lato text-white w-max ml-4 letter-spc-md"
+          class="text-[18px] sm:text-[25px] font-lato text-white w-max ml-4 letter-spc-md"
         >
           More Details
         </p>
       </div>
-      <div class="modal-content p-14 relative">
+      <div class="modal-content p-7 md:p-14 relative">
         <div class="absolute right-5 top-5">
           <CloseIcon @closeModal="toggleModal" />
         </div>

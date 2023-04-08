@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <section
-      class="bg-cover bg-center min-h-screen relative overflow-hidden"
+      class="bg-cover bg-center min-h-screen relative "
       :style="`background-image: url(${imageUrl})`"
     >
-      <div class="absolute max-w-413 w-screen bg-main h-screen z-0"></div>
-      <div class="mx-auto max-w-screen-xl min-h-screen z-10 relative">
+      <div class="absolute max-w-413 w-screen bg-main h-24 bottom-0 md:bottom-auto md:h-screen z-0"></div>
+      <div class="mx-auto max-w-screen-xl min-h-screen z-20 relative">
         <div class="hero-content">
           <h1
             :class="isOpen ? 'fade-out' : 'fade-in'"
-            class="relative top-7 font-bold font-didot text-[224px] text-white"
+            class="relative top-7 font-bold font-didot text-[80px] sm:text-[140px] md:text-[180px] lg:text-[224px] text-white"
           >
             Explore
           </h1>

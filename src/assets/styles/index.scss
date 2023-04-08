@@ -35,7 +35,13 @@ font-family: $lato;
 }
 
 .max-w-413 {
-  max-width: 413px;
+  max-width: 100%;
+  @media(min-width: 768px) {
+    max-width: 313px;
+  }
+  @media(min-width: 1024px) {
+    max-width: 413px;
+  }
 }
 
 .letter-spc-sm {

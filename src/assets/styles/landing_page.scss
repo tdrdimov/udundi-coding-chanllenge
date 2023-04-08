@@ -1,10 +1,22 @@
 .hero-content {
   position: absolute;
-  left: 106px;
-  bottom: 270px;
+  left: 50%;
+  top: 40%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+
+  @media(min-width: 1024px) {
+    left: 106px;
+    bottom: 270px;
+    top: auto;
+    transform: translate(0, 0);
+  }
 
   h1 {
-    line-height: 288.74px;
+    line-height: 188.74px;
+    @media(min-width: 640px) {
+      line-height: 288.74px;
+    }
   }
 
   p {
@@ -24,6 +36,7 @@
     opacity: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   to {
     opacity: 0;
     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
@@ -42,6 +55,7 @@
     opacity: 0;
     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
   }
+
   to {
     opacity: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
