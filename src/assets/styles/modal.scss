@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+
 .modal {
   z-index: 2;
   width: 43px;
@@ -26,6 +27,7 @@
   &.active .modal-trigger {
     display: none;
   }
+
   .modal-content {
     opacity: 0;
     visibility: hidden;
@@ -33,25 +35,44 @@
     transition: opacity 0s ease-out;
     transition-delay: 0s;
 
+    h1,
+    p,
+    button {
+      transform: translateX(-20px);
+      transition: all 0s ease-out;
+      transition-delay: 1s;
+    }
+
     h1 {
       line-height: 85px;
     }
+
     p {
       line-height: 22px;
     }
   }
 }
+
 .active {
   box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.29);
 }
+
 .active .modal-content {
   opacity: 1;
   visibility: visible;
   transform: translateX(0) scale(1);
   transition: opacity 0.5s ease-out;
   transition-delay: 0.6s;
-  display: block;
+
+  h1,
+  p,
+  button {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.6s;
+  }
 }
+
 .animate {
   animation-name: go;
 }
@@ -66,29 +87,33 @@
     left: 0;
     transform: translate(0, 0);
   }
+
   to {
-    width: 100vw;
-    height: 100vh;
+    width: 96vw;
+    height: 500px;
     overflow-y: scroll;
     border-radius: 0;
-    top: 55%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -70%);
     background-color: white;
   }
 }
+
 .animate-back {
   animation-name: goback;
 }
+
 @keyframes goback {
   from {
     width: 580px;
-    height: 625px;
+    height: 500px;
     border-radius: 0;
-    top: 50%;
+    top: 70%;
     left: 0;
-    transform: translate(0, -60vh);
+    transform: translate(0, -70%);
   }
+
   to {
     width: 43px;
     height: 43px;
@@ -110,6 +135,17 @@
       left: 0;
       transform: translate(0, -60vh);
       background-color: white;
+    }
+  }
+
+  @keyframes goback {
+    from {
+      width: 550px;
+      height: 650px;
+      border-radius: 0;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -60vh);
     }
   }
 }

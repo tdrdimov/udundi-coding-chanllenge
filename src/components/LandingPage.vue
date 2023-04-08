@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <section
-      class="bg-cover bg-center min-h-screen relative "
+      class="bg-cover bg-center min-h-screen relative md:overflow-hidden"
       :style="`background-image: url(${imageUrl})`"
     >
       <div class="absolute max-w-413 w-screen bg-main h-24 bottom-0 md:bottom-auto md:h-screen z-0"></div>

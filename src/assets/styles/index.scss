@@ -16,6 +16,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html, body{
 padding: 0;
 margin: 0;
@@ -32,16 +33,6 @@ font-family: $lato;
 
 .font-didot {
   font-family: $didot;
-}
-
-.max-w-413 {
-  max-width: 100%;
-  @media(min-width: 768px) {
-    max-width: 313px;
-  }
-  @media(min-width: 1024px) {
-    max-width: 413px;
-  }
 }
 
 .letter-spc-sm {

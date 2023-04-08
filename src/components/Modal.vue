@@ -21,7 +21,7 @@
         </p>
       </div>
       <div class="modal-content p-7 md:p-14 relative">
-        <div class="absolute right-5 top-5">
+        <div class="absolute right-5 top-5 z-30">
           <CloseIcon @closeModal="toggleModal" />
         </div>
 
@@ -40,7 +40,8 @@
           ea commodi consequatur?
         </p>
         <button
-          class="text-white gradient-main border border-gray-400 font-bold font-lato letter-spc-lg uppercase px-16 py-3.5"
+          @click="toggleModal"
+          class="text-white gradient-main border border-gray-400 font-bold font-lato letter-spc-lg uppercase px-16 py-3.5 mb-5"
         >
           Read More
         </button>

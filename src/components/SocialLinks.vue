@@ -1,5 +1,5 @@
 <template>
-  <div class="social-links absolute bottom-0 md:bottom-0 right-0 flex w-full md:w-fit justify-center md:flex-col items-center z-10 md:mr-7 mb-2 md:mb-10">
+  <div class="social-links absolute bottom-0 md:bottom-0 right-0 flex w-full md:w-fit justify-center md:flex-col items-center z-10 md:z-20 md:mr-7 mb-2 md:mb-10">
     <a href="https://www.facebook.com/udundi" target="_blank" class="mr-9 md:mr-0 md:mb-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +51,11 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @media(max-width: 768px) {
   .social-links {
     svg {
-      width: 40px!important;
+      width: 40px;
     }
   }
 }
