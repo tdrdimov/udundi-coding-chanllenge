@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkudundi_coding_challenge"]=self["webpackChunkudundi_coding_challenge"]||[]).push([[702],{702:function(e,n,c){e.exports=c.p+"img/coding-challenge-image.d43842b4.jpg"}}]);
