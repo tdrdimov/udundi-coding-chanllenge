@@ -1,8 +1,16 @@
+@import './variables.scss';
+
+$btnSize: 43px;
+$half: 50%;
+$white: #ffffff;
+$zero: 0;
+$easeOut: ease-out;
+
 .modalOverlay {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: $zero;
+  left: $zero;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -11,17 +19,17 @@
 
 .modal {
   z-index: 2;
-  width: 43px;
-  height: 43px;
-  background-color: #fff;
-  border-radius: 50%;
+  width: $btnSize;
+  height: $btnSize;
+  background-color: $white;
+  border-radius: $half;
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(0, 0);
+  top: $zero;
+  left: $zero;
+  transform: translate($zero, $zero);
   animation-fill-mode: forwards;
   animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  animation-timing-function: cubic-bezier(0.55, $zero, 0.1, 1);
   animation-direction: alternate;
 
   &.active .modal-trigger {
@@ -29,17 +37,17 @@
   }
 
   .modal-content {
-    opacity: 0;
+    opacity: $zero;
     visibility: hidden;
-    transform: translateX(-20px) scale(0);
-    transition: opacity 0s ease-out;
+    transform: translateX(-20px) scale($zero);
+    transition: opacity 0s $easeOut;
     transition-delay: 0s;
 
     h1,
     p,
     button {
       transform: translateX(-20px);
-      transition: all 0s ease-out;
+      transition: all 0s $easeOut;
       transition-delay: 1s;
     }
 
@@ -54,21 +62,21 @@
 }
 
 .active {
-  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 0px 10px 7px rgba($zero, $zero, $zero, 0.29);
 }
 
 .active .modal-content {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0) scale(1);
-  transition: opacity 0.5s ease-out;
+  transform: translateX($zero) scale(1);
+  transition: opacity 0.5s $easeOut;
   transition-delay: 0.6s;
 
   h1,
   p,
   button {
-    transform: translateX(0);
-    transition: all 0.5s ease-out;
+    transform: translateX($zero);
+    transition: all 0.5s $easeOut;
     transition-delay: 0.6s;
   }
 }
@@ -80,23 +88,23 @@
 // Mobile Animation
 @keyframes go {
   from {
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
+    width: $btnSize;
+    height: $btnSize;
+    border-radius: $half;
+    top: $zero;
+    left: $zero;
+    transform: translate($zero, $zero);
   }
 
   to {
     width: 96vw;
     height: 500px;
     overflow-y: scroll;
-    border-radius: 0;
+    border-radius: $zero;
     top: 70%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    background-color: white;
+    left: $half;
+    transform: translate(-$half, -70%);
+    background-color: $white;
   }
 }
 
@@ -108,33 +116,33 @@
   from {
     width: 580px;
     height: 500px;
-    border-radius: 0;
+    border-radius: $zero;
     top: 70%;
-    left: 0;
-    transform: translate(0, -70%);
+    left: $zero;
+    transform: translate($zero, -70%);
   }
 
   to {
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
+    width: $btnSize;
+    height: $btnSize;
+    border-radius: $half;
+    top: $zero;
+    left: $zero;
+    transform: translate($zero, $zero);
   }
 }
 
 // Desktop animation
-@media(min-width: 768px) {
+@media(min-width: $sm) {
   @keyframes go {
     to {
       width: 550px;
       height: 650px;
-      border-radius: 0;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -60vh);
-      background-color: white;
+      border-radius: $zero;
+      top: $half;
+      left: $zero;
+      transform: translate($zero, -60vh);
+      background-color: $white;
     }
   }
 
@@ -142,10 +150,10 @@
     from {
       width: 550px;
       height: 650px;
-      border-radius: 0;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -60vh);
+      border-radius: $zero;
+      top: $half;
+      left: $zero;
+      transform: translate($zero, -60vh);
     }
   }
 }

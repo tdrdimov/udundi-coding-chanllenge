@@ -11,7 +11,7 @@
             :class="isOpen ? 'fade-out' : 'fade-in'"
             class="relative top-7 font-bold font-didot text-[80px] sm:text-[140px] md:text-[180px] lg:text-[224px] text-white"
           >
-            Explore
+            {{ data.title }}
           </h1>
           <div class="relative">
             <Modal @modalOpen="isOpen = !isOpen" />
@@ -37,6 +37,7 @@ export default {
     return {
       isOpen: false,
       imageUrl: "",
+      data: require('@/assets/content/static.json')
     };
   },
   mounted() {

@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .hero-content {
   position: absolute;
   left: 50%;
@@ -5,7 +7,7 @@
   margin: auto;
   transform: translate(-50%, -50%);
 
-  @media(min-width: 1024px) {
+  @media(min-width: $md) {
     left: 106px;
     bottom: 270px;
     top: auto;
@@ -14,7 +16,7 @@
 
   h1 {
     line-height: 168.74px;
-    @media(min-width: 640px) {
+    @media(min-width: $xs) {
       line-height: 288.74px;
     }
   }
@@ -64,10 +66,10 @@
 
 .max-w-413 {
   max-width: 100%;
-  @media(min-width: 768px) {
+  @media(min-width: $sm) {
     max-width: 313px;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: $md) {
     max-width: 413px;
   }
 }

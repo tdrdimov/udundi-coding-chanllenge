@@ -3,3 +3,8 @@ $lato: 'Lato', sans-serif;
 $color_main: #611818;
 $gradient_main: linear-gradient(90deg, $color_main 0%, #a36754 100%);
 $fonts_path: '@/assets/fonts/';
+
+// Breakpoints
+$xs: 640px;
+$sm: 768px;
+$md: 1024px;

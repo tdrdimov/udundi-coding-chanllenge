@@ -52,7 +52,9 @@
 </template>
 
 <style scoped lang="scss">
-@media(max-width: 768px) {
+@import '../assets/styles/variables.scss';
+
+@media(max-width: $sm) {
   .social-links {
     svg {
       width: 40px;
