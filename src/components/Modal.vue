@@ -1,6 +1,7 @@
 <template>
   <div>
     <div
+      ref="modal"
       class="modal"
       :class="{
         active: isActive,
@@ -56,7 +57,7 @@ export default {
       isActive: false,
       isAnimated: false,
       isAnimatedBack: false,
-      data: require('@/assets/content/static.json')
+      data: require("@/assets/content/static.json"),
     };
   },
   methods: {
@@ -70,7 +71,14 @@ export default {
         this.isAnimated = false;
         this.isAnimatedBack = true;
       }
+      this.scrollToTop();
       this.$emit("modalOpen");
+    },
+    scrollToTop() {
+      const { modal } = this.$refs;
+      setTimeout(() => {
+        modal.scrollTop = 0;
+      }, 500)
     },
   },
 };

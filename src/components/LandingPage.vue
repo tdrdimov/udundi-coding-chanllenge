@@ -4,22 +4,27 @@
       class="bg-cover bg-center min-h-screen relative md:overflow-hidden"
       :style="`background-image: url(${imageUrl})`"
     >
-      <div class="absolute max-w-413 w-screen bg-main h-24 bottom-0 md:bottom-auto md:h-screen z-0"></div>
+      <div
+        class="absolute max-w-413 w-screen bg-main h-24 bottom-0 md:bottom-auto md:h-screen z-10 md:z-0"
+      ></div>
       <div class="mx-auto max-w-screen-xl min-h-screen z-20 relative">
         <div class="hero-content">
-          <h1
-            :class="isOpen ? 'fade-out' : 'fade-in'"
-            class="relative top-7 font-bold font-didot text-[80px] sm:text-[140px] md:text-[180px] lg:text-[224px] text-white"
+          <div class="fade-in-init relative top-7">
+            <h1
+            :class="{'fade-out': isOpen, 'fade-in': !isOpen}"
+            class="font-bold font-didot text-[80px] sm:text-[140px] md:text-[180px] lg:text-[224px] text-white"
           >
             {{ data.title }}
           </h1>
+          </div>
           <div class="relative">
             <Modal @modalOpen="isOpen = !isOpen" />
           </div>
         </div>
       </div>
-      <SocialLinks />
+      <SocialLinks :isOpen="isOpen" />
     </section>
+    <div class="overlay"></div>
   </div>
 </template>
 
@@ -37,7 +42,7 @@ export default {
     return {
       isOpen: false,
       imageUrl: "",
-      data: require('@/assets/content/static.json')
+      data: require("@/assets/content/static.json"),
     };
   },
   mounted() {
@@ -49,5 +54,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../assets/styles/landing_page.scss';
+@import "../assets/styles/landing_page.scss";
 </style>

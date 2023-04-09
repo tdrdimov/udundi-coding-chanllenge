@@ -1,5 +1,5 @@
 <template>
-  <div class="social-links absolute bottom-0 md:bottom-0 right-0 flex w-full md:w-fit justify-center md:flex-col items-center z-10 md:z-20 md:mr-7 mb-2 md:mb-10">
+  <div class="social-links absolute bottom-0 md:bottom-0 right-0 flex w-full md:w-fit justify-center md:flex-col items-center z-20 md:mr-7 mb-2 md:mb-10">
     <a href="https://www.facebook.com/udundi" target="_blank" class="mr-9 md:mr-0 md:mb-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +50,14 @@
     </a>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    isOpen: Boolean
+  }
+}
+</script>
 
 <style scoped lang="scss">
 @import '../assets/styles/variables.scss';

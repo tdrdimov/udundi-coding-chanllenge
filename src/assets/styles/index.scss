@@ -17,10 +17,11 @@
   box-sizing: border-box;
 }
 
-html, body{
-padding: 0;
-margin: 0;
-font-family: $lato;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $lato;
 }
 
 .bg-main {
@@ -49,4 +50,17 @@ font-family: $lato;
 
 .gradient-main {
   background: $gradient_main;
+}
+
+@media (max-width: $sm) {
+  .overlay::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
